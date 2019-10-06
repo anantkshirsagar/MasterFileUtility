@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="resources"/>
+	<classpathentry kind="lib" path="H:/eclipse-project-workspace/MasterFileUtility/resources/lib/commons-fileupload-1.4.jar"/>
+	<classpathentry kind="lib" path="H:/eclipse-project-workspace/MasterFileUtility/resources/lib/commons-io-2.6.jar"/>
+	<classpathentry kind="lib" path="H:/eclipse-project-workspace/MasterFileUtility/resources/lib/connection-master-v1.0.jar"/>
+	<classpathentry kind="lib" path="H:/eclipse-project-workspace/MasterFileUtility/resources/lib/mysql-connector-java-5.1.47.jar"/>
+	<classpathentry kind="lib" path="H:/eclipse-project-workspace/MasterFileUtility/resources/lib/mysql-connector-java-5.1.47-bin.jar"/>
+	<classpathentry kind="lib" path="H:/eclipse-project-workspace/MasterFileUtility/resources/lib/sendgrid-java.jar"/>
+	<classpathentry kind="lib" path="H:/eclipse-project-workspace/MasterFileUtility/resources/lib/servlet-api.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
