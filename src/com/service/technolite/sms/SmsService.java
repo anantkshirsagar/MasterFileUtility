@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
+import java.net.URLConnection;
 import java.util.logging.Logger;
 
 /**
@@ -21,7 +22,7 @@ public class SmsService {
 
 	private SmsPropertyReader smsPropertyReader;
 	private SmsProperty smsProperty;
-	
+
 	/**
 	 * This method loads the configuration of the sms API using .properties file
 	 * 
@@ -34,8 +35,8 @@ public class SmsService {
 	}
 
 	/**
-	 * This method accepts SmsDetails which contains message and receivers
-	 * number and sends sms
+	 * This method accepts SmsDetails which contains message and receivers number
+	 * and sends sms
 	 * 
 	 * @param smsDetails
 	 * @return String
@@ -43,8 +44,11 @@ public class SmsService {
 	 */
 	public String sendSms(SmsDetails smsDetails) throws IOException {
 		String smsUrl = buildURL(smsDetails);
-		URL url = new URL(smsUrl);
-		InputStream inputStream = url.openConnection().getInputStream();
+		URL url = new URL(smsUrl.trim());
+		URLConnection openConnection = url.openConnection();
+		openConnection.setRequestProperty("User-Agent",
+				"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.95 Safari/537.11");
+		InputStream inputStream = openConnection.getInputStream();
 		BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
 		StringBuilder response = new StringBuilder();
 		String line = null;
